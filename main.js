@@ -6,25 +6,19 @@ function getComputerChoice() {
     return randomPick;
   }
 
-
-// Make variables for player and computer selection
-
-const computerSelection = getComputerChoice();
+// Variables for player selection, number of rounds
 const playerSelection = "Scissors";
 const rounds = 5;
 
-
-//Variables for counting score //UPDATE from const to let
-
+//Variables for counting score
 let playerScore = 0
 let computerScore = 0
 let tieScore = 0 
 
 
 // Specify game scenarios, prompt user to make their selection and make their choice case insensitive
-
 function game() {
-    
+    const computerSelection = getComputerChoice();  //UPDATE moved this into the loop
     function playRound(playerSelection, computerSelection) {
         playerSelection = prompt("What do you choose? Rock, paper or scissors!") 
             if (playerSelection.toLowerCase() === "rock" && computerSelection === "scissors") {
@@ -48,20 +42,29 @@ function game() {
             } else if (playerSelection.toLowerCase() === computerSelection) {
                 tieScore++
                 return ("It's a draw!")    
-            }
+            } else {alert("Try again, entering rock, paper or scissors")} // This needs to not count as part of the 5 rounds. 
         
     }
-    console.log("The computer chose " + computerSelection,"-", playRound(playerSelection, computerSelection)); // UPDATE move here and add computer choice
-    console.log("You've won: ", playerScore, ", lost: ", computerScore, ", tied: ", tieScore); // // add view for counter // UPDATE move counter here, add strings 
-
+    console.log("The computer chose " + computerSelection,"-", playRound(playerSelection, computerSelection)); // view for game outcome
+    console.log("You've won: ", playerScore, ", lost: ", computerScore, ", tied: ", tieScore); // view for counter 
 }
 
-// write a function that counts 5 playRounds 
+// Add a for loop that counts 5 playRounds 
 for (let i = 0; i < rounds; i++) {
-    game() }  // UPDATE changed this from playRound to game
+    game() } 
 
+// Report the overall winner of the game
+function gameOutcome(playerScore, computerScore) {
+    if (playerScore < computerScore) {
+        return ("After 5 rounds, you lose! Better luck next time.")
+    } else if (playerScore > computerScore) {
+        return ("After 5 rounds, you are the overall winner! Congratulations.")
+    } else {return ("After 5 rounds, it's a draw!")}
+    }
 
+    console.log (gameOutcome(playerScore, computerScore))
 
+    
 
 
     
