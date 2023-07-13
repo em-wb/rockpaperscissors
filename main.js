@@ -1,4 +1,4 @@
-// Make the computer select either Rock, Paper or Scissors randomly
+// Make the computer select either Rock, Paper or Scissors randomly 
 
 function getComputerChoice() {
     let options = ["rock", "paper", "scissors"];
@@ -10,58 +10,55 @@ function getComputerChoice() {
 // Make variables for player and computer selection
 
 const computerSelection = getComputerChoice();
-    console.log(computerSelection);
 const playerSelection = "Scissors";
-const rounds = 4;
+const rounds = 5;
 
 
-//UPDATE: make variables for counting score 
+//Variables for counting score //UPDATE from const to let
 
-const playerScore = 0
-const computerScore = 0
-const tieScore = 0 
+let playerScore = 0
+let computerScore = 0
+let tieScore = 0 
 
 
-// Specify game scenarios // UPDATE: make lower case // UPDATE: add prompt for user
+// Specify game scenarios, prompt user to make their selection and make their choice case insensitive
 
-function playRound(playerSelection, computerSelection) {
-    playerSelection = prompt("What do you choose? Rock, paper or scissors!") 
-        if (playerSelection.toLowerCase() === "rock" && computerSelection === "scissors") {
-            return ("Rock blunts scissors, you win!")
-            
-        } else if (playerSelection.toLowerCase() === "rock" && computerSelection === "paper") {
-            return ("Paper wraps rock, you lose!")
-            
-        } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "scissors") {
-            return ("Scissors cut paper, you lose!")
-            
-        } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "rock") {
-            return ("Paper wraps rock, you win!")
-            
-        } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "rock") {
-            return ("Rock blunts scissors, you lose!")   
-           
-        } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "paper") {
-            return ("Scissors cut paper, you win!") 
-           
-        } else if (playerSelection.toLowerCase() === computerSelection) {
-            return ("It's a draw!")
-            
-        }
+function game() {
+    
+    function playRound(playerSelection, computerSelection) {
+        playerSelection = prompt("What do you choose? Rock, paper or scissors!") 
+            if (playerSelection.toLowerCase() === "rock" && computerSelection === "scissors") {
+                playerScore++
+                return ("Rock blunts scissors, you win!")  
+            } else if (playerSelection.toLowerCase() === "rock" && computerSelection === "paper") {
+                computerScore++
+                return ("Paper wraps rock, you lose!")
+            } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "scissors") {
+                computerScore++
+                return ("Scissors cut paper, you lose!")   
+            } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "rock") {
+                playerScore++
+                return ("Paper wraps rock, you win!")   
+            } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "rock") {
+                computerScore++   
+                return ("Rock blunts scissors, you lose!")
+            } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "paper") {
+                playerScore++ 
+                return ("Scissors cut paper, you win!")
+            } else if (playerSelection.toLowerCase() === computerSelection) {
+                tieScore++
+                return ("It's a draw!")    
+            }
+        
+    }
+    console.log("The computer chose " + computerSelection,"-", playRound(playerSelection, computerSelection)); // UPDATE move here and add computer choice
+    console.log("You've won: ", playerScore, ", lost: ", computerScore, ", tied: ", tieScore); // // add view for counter // UPDATE move counter here, add strings 
+
 }
 
-console.log(playRound(playerSelection, computerSelection));
-
-// UPDATE: write a function that counts 5 rounds (at the moment return message doesn't update)
-
+// write a function that counts 5 playRounds 
 for (let i = 0; i < rounds; i++) {
-    playRound() 
-}
-
-
-//UPDATE add view for counter  (at the moment, counting not set up)
-
-console.log(playerScore, computerScore, tieScore)
+    game() }  // UPDATE changed this from playRound to game
 
 
 
