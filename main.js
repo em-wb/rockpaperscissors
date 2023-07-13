@@ -1,16 +1,15 @@
 // Make the computer select either Rock, Paper or Scissors randomly 
-
 function getComputerChoice() {
     let options = ["rock", "paper", "scissors"];
     let randomPick = options[Math.floor(Math.random() * options.length)];
     return randomPick;
   }
 
-// Variables for player selection, number of rounds
+// Add variables for player selection, number of rounds
 const playerSelection = "Scissors";
 const rounds = 5;
 
-//Variables for counting score
+// Add variables for counting score
 let playerScore = 0
 let computerScore = 0
 let tieScore = 0 
@@ -18,7 +17,7 @@ let tieScore = 0
 
 // Specify game scenarios, prompt user to make their selection and make their choice case insensitive
 function game() {
-    const computerSelection = getComputerChoice();  //UPDATE moved this into the loop
+    const computerSelection = getComputerChoice();  
     function playRound(playerSelection, computerSelection) {
         playerSelection = prompt("What do you choose? Rock, paper or scissors!") 
             if (playerSelection.toLowerCase() === "rock" && computerSelection === "scissors") {
@@ -42,14 +41,14 @@ function game() {
             } else if (playerSelection.toLowerCase() === computerSelection) {
                 tieScore++
                 return ("It's a draw!")    
-            } else {alert("Try again, entering rock, paper or scissors")} // This needs to not count as part of the 5 rounds. 
+            } else {alert("Try again, by entering: rock, paper or scissors.") } // This needs to not count as part of the 5 rounds, come back and fix this when I know more!
         
     }
-    console.log("The computer chose " + computerSelection,"-", playRound(playerSelection, computerSelection)); // view for game outcome
-    console.log("You've won: ", playerScore, ", lost: ", computerScore, ", tied: ", tieScore); // view for counter 
+    console.log("The computer chose " + computerSelection,"-", playRound(playerSelection, computerSelection)); // view game outcome
+    console.log("You've won: ", playerScore, ", lost: ", computerScore, ", tied: ", tieScore); // view score counter 
 }
 
-// Add a for loop that counts 5 playRounds 
+// A for loop that counts 5 playRounds 
 for (let i = 0; i < rounds; i++) {
     game() } 
 
