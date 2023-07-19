@@ -8,5 +8,4 @@ Apply foundational learning using, for example: functions, variables, if/else st
 Learn how to use for loops
 Use resources online to help solve problems
 
-Reflections:
-The game only plays 5 rounds, even if the user makes an error entering their play. I will come back and fix this bug when I have the knowledge to do so.
+

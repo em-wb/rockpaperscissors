@@ -41,12 +41,18 @@ function game() {
             } else if (playerSelection.toLowerCase() === computerSelection) {
                 tieScore++
                 return ("It's a draw!")    
-            } else {alert("Try again, by entering: rock, paper or scissors.") } // This needs to not count as part of the 5 rounds, come back and fix this when I know more!
+            } else {alert("Try again, by entering: rock, paper or scissors.");
+                game();
+                return ("NOT COUNTED, incorrect input :)")             
+                 } 
         
     }
-    console.log("The computer chose " + computerSelection,"-", playRound(playerSelection, computerSelection)); // view game outcome
-    console.log("You've won: ", playerScore, ", lost: ", computerScore, ", tied: ", tieScore); // view score counter 
-}
+        console.log("The computer chose " + computerSelection,"-", playRound(playerSelection, computerSelection))
+         // view game outcome
+        console.log("You've won: ", playerScore, ", lost: ", computerScore, ", tied: ", tieScore); // view score counter 
+    };
+    
+
 
 // A for loop that counts 5 playRounds 
 for (let i = 0; i < rounds; i++) {
