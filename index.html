@@ -8,20 +8,32 @@
     </head>
     <body>
         <!-- add three buttons for rps game selection -->
-    <h1>What will you choose: Rock, paper or scissors!?</h1>
-    <div id="buttonsContainer">
-        <button id="rock" >Rock</button>
-        <button id="paper" >Paper</button>
-        <button id="scissors">Scissors</button>
+    <div id="headers">
+        <h1>ROCK ✊</h1>
+        <h1>PAPER ✋</h1>
+        <h1>SCISSORS ✌️</h1>
     </div>
-    <div id="resultsContainer">
-        <div id="textResult"></div>
-        <div id="yourScore">Your score: </div>
-        <div id="botScore">Bot score: </div>
-        <div id="botChoice"></div>
-    </div>
-    <div id="endGameContainer">
-        <button id="restarts">Restart Game</button>
+        <!--<div id="subheaders"> -->
+            <h2>It's You vs Bot. Best of five rounds. Good luck my friend.</h2>
+        
+    
+    <div id="gameContainer">
+        <div id="buttonsContainer">
+            <button class="choice" id="rock" alt="Rock" >✊</button>
+            <button class="choice" id="paper" alt="Paper">✋</button>
+            <button class="choice" id="scissors" alt="Scissors">✌️</button>
+            </div>
+        <div id="resultsContainer">
+               
+            <div id="scores">
+                <div class="score" id="yourScore">Your Score </div>
+                <div class="score" id="botScore">Bot Score </div>    
+            </div>
+            <div id="textResult"></div>
+            <div id="botChoice"></div>
+        </div>
+        <div id="endGameContainer"></div>
+        <button id="restarts">Play again</button>
     </div>    
     </body>
 </html>

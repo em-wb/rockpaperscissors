@@ -1,3 +1,135 @@
-#resultsContainer {
-    display: flex;
+body {
+    background-color: #ddd4fc;
+    color: #aa3e38;
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display:flex;
+    flex-direction: column;
+    margin-right: 25%;
+    margin-left:25%;
+    text-align: center;
+    
+    
 }
+
+#headers {
+    align-content: center;
+    white-space: nowrap; 
+    border-bottom: #aa3e38 5px solid;
+    
+}
+
+h1 {
+    margin: 0%;
+}
+
+h2 {
+    font-size: 18px;
+    font-family: Georgia, serif;
+}
+
+div {
+    font-weight: 320;
+    font-size: 23px;
+  }
+
+
+#buttonsContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    padding:1%;
+    margin-top:2%;
+}
+
+.choice {
+  border: none;
+  background: #ddd4fc;
+  color: #fd01be;
+  font-size: 150px;
+  font-weight: bolder;
+  margin: auto;
+  cursor: pointer;
+  
+  
+}
+
+.choice:hover {
+    transform: scale(1.1);
+}
+
+#yourScore, #botScore {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+#resultsContainer {
+    display:flex;
+    flex-direction: column;
+    height: 240px;
+    max-height: 240px;   
+}
+
+#textResult {
+    height: 20px;
+    max-height: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Georgia, serif;
+    padding-top: 3px;
+    
+}
+
+#scores {
+    display: flex;
+    align-content: center;
+    margin-bottom: 5%;
+}
+
+.score {
+    padding: 1%;
+    padding-bottom: 3%;
+    white-space: nowrap; 
+    text-align: center;
+    margin:auto;
+}
+
+#botChoice {
+    font-family: Georgia, serif;
+    font-style: italic;
+    text-align: center;
+    color: #aa3e38;
+    align-items: center;
+    margin: 2%;  
+}
+
+#gameContainer {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#endGameContainer {
+    height: 15px;
+    max-height: 15px;
+    padding-bottom: 5%;
+}
+
+#restarts {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    border: 1px solid #fd01be;
+    background: #ddd4fc;
+    color: #fd01be;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 20%;
+    margin-right: 20%;
+    cursor: pointer;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+}
+

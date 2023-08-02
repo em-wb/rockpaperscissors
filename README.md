@@ -8,4 +8,8 @@ Apply foundational learning using, for example: functions, variables, if/else st
 Learn how to use for loops
 Use resources online to help solve problems
 
+Updated skills:
+Create game UI and move from the console
+DOM manipulation
+
 
