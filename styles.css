@@ -37,7 +37,7 @@ div {
 
 #buttonsContainer {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-content: center;
     padding:1%;
     margin-top:2%;
@@ -72,8 +72,6 @@ div {
 }
 
 #textResult {
-    height: 20px;
-    max-height: 20px;
     text-align: center;
     font-weight: bold;
     font-family: Georgia, serif;
@@ -90,7 +88,7 @@ div {
 .score {
     padding: 1%;
     padding-bottom: 3%;
-    white-space: nowrap; 
+    white-space: wrap; 
     text-align: center;
     margin:auto;
 }
@@ -111,20 +109,16 @@ div {
 }
 
 #endGameContainer {
-    height: 15px;
-    max-height: 15px;
     padding-bottom: 5%;
 }
 
 #restarts {
     font-family: Verdana, Geneva, Tahoma, sans-serif; 
-    border: 1px solid #fd01be;
+    border: 1px solid #aa3e38 ;
     background: #ddd4fc;
-    color: #fd01be;
+    color: #aa3e38;
     font-size: 20px;
     font-weight: bolder;
-    margin-left: 20%;
-    margin-right: 20%;
     cursor: pointer;
     padding-top: 3px;
     padding-bottom: 3px;
