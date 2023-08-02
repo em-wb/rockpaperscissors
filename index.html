@@ -3,10 +3,26 @@
     <head>
         <meta charset="UTF-8">
         <title>Rock Paper Scissors</title>
-        <script src="main.js"></script>
+        <script src="main.js" defer></script>
+        <link rel='stylesheet' href='styles.css'/>
     </head>
     <body>
-        
+        <!-- add three buttons for rps game selection -->
+    <h1>What will you choose: Rock, paper or scissors!?</h1>
+    <div id="buttonsContainer">
+        <button id="rock" >Rock</button>
+        <button id="paper" >Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
+    <div id="resultsContainer">
+        <div id="textResult"></div>
+        <div id="yourScore">Your score: </div>
+        <div id="botScore">Bot score: </div>
+        <div id="botChoice"></div>
+    </div>
+    <div id="endGameContainer">
+        <button id="restarts">Restart Game</button>
+    </div>    
     </body>
 </html>
 
